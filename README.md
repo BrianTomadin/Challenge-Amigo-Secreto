@@ -35,14 +35,6 @@ Tecnologías utilizadas:
 
 - JavaScript
 
-Instalación y ejecución
-
-Clonar este repositorio:
-
-1. git clone https://github.com/tu-usuario/amigo-secreto.git
-
-2. Abrir el archivo index.html en un navegador web.
-
 Autor:
 
 Brian Tomadin
