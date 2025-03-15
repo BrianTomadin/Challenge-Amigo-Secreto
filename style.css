@@ -1,0 +1,428 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #B0B0B0;;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #222222; 
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-tertiary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Lato", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 18px;
+}
+
+.button-container {
+    width: 300px;
+    justify-content: center;
+}
+
+/* Estilos de entrada de texto */
+.input-title {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-right: none;
+    border-radius: 25px 0 0 25px;
+    font-family: "Inter", sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos de botón */
+button {
+    padding: 15px 30px;
+    font-family: "lato", sans-serif;
+    font-size: 18px;
+    border: 2px solid #000;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 0 25px 25px 0;
+}
+
+.button-add:hover {
+    background-color: #909090;
+    transform: scale(1.05);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: black;
+    font-family: "Lato", sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 0;
+}
+
+#listaAmigos {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    font-family: "Lato", sans-serif;
+    gap: 10px;
+}
+
+#listaAmigos li {
+    background-color: #fff;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+#listaAmigos li:hover {
+    transform: scale(1.05);
+}
+
+#listaSorteados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: black;
+    font-family: "Lato", sans-serif;
+
+}
+
+#listaSorteados li {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+#listaSorteadosTitulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    color: var(--color-primary);
+    padding: 10px 20px;
+    border-radius: 12px;
+
+}
+
+#listaSorteados li:hover {
+    transform: scale(1.05);
+}
+
+.result-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: "Lato", sans-serif;
+    color: var(--color-primary);
+    background: linear-gradient(90deg, rgba(75,105,253,1) 0%, rgba(254,101,43,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
+}
+/* Efecto hover para que crezca un poco */
+.result-list:hover {
+    transform: scale(1.05);
+}
+
+/* Botón de sortear título */
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 30px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
+    font-weight: bold;
+    gap: 8px; 
+    margin-top: 20px;
+    border-radius: 25px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-draw img {
+    width: 24px;
+    height: 24px;
+    margin: 0; 
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    transform: scale(1.05);
+}
+
+.button-reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 30px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 16px;
+    font-weight: bold;
+    gap: 8px;
+    margin-top: 20px;
+    border-radius: 25px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button-reset img {
+    width: 24px;
+    height: 24px;
+    margin: 0; 
+}
+
+.button-reset:hover {
+    background-color: var(--color-button-hover);
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+ 
+/*Ajustes para móviles (máx. 480px) */
+@media (max-width: 480px) {
+    .header-banner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .main-title {
+        font-size: 24px;
+        text-align: center;
+        z-index: 10;
+        background-color: transparent;
+        padding: 5px 10px;
+        border-radius: 10px;
+        max-width: 90%;
+        margin-bottom: 10px;
+    }
+
+    .header-banner img {
+        width: 80%;
+        height: auto;
+        max-height: 180px;
+        object-fit: contain;
+    }
+
+    .main-content {
+        padding: 5px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .input-section {
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .input-name {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .button-add {
+        width: 80%;
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .button-draw, .button-reset {
+        width: 90%;
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .button-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #listaAmigos, #listaSorteados {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    #listaAmigos li, #listaSorteados li {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #resultado {
+        font-size: 1.3rem;
+    }
+}
+
+/*Ajustes para tablets (máx. 768px) */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 30px;
+    }
+
+    .header-banner img {
+        width: 70%;
+        max-height: 220px;
+    }
+
+    .button-draw, .button-reset {
+        width: 90%;
+    }
+}
+
+/*Ajustes para laptops (máx. 1024px) */
+@media (max-width: 1024px) {
+    .main-content {
+        max-width: 95%;
+    }
+
+    .main-title {
+        font-size: 42px;
+    }
+}
+
+/*Ajustes para pantallas grandes (más de 1200px) */
+@media (min-width: 1200px) {
+    .main-content {
+        max-width: 70%;
+    }
+}
+
+
+
